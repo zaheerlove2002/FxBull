@@ -4,11 +4,16 @@
   box-sizing:border-box;
 }
 
+
 body{
   font-family:Arial, sans-serif;
   background:#08090d;
   color:white;
+  transition:0.3s;
 }
+
+
+/* Main Layout */
 
 .layout{
   display:flex;
@@ -16,46 +21,286 @@ body{
 }
 
 
+/* Sidebar */
+
 aside{
+
   width:250px;
   background:#11131a;
   padding:25px;
+  border-right:1px solid #252936;
+
 }
 
+
+aside h2{
+
+  color:#22c55e;
+  margin-bottom:30px;
+
+}
+
+
+nav p{
+
+  padding:12px;
+  margin-bottom:8px;
+  color:#aaa;
+  border-radius:8px;
+  cursor:pointer;
+
+}
+
+
+nav p:hover{
+
+  background:#1c202b;
+  color:white;
+
+}
+
+
+
+/* Content Area */
 
 .content{
+
   flex:1;
+
 }
 
+
+
+/* Topbar */
 
 .topbar{
+
   height:70px;
   background:#11131a;
-  padding:20px;
+  border-bottom:1px solid #252936;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 25px;
+
 }
 
+
+
+.topbar input{
+
+  background:#08090d;
+  border:1px solid #252936;
+  padding:10px 15px;
+  border-radius:8px;
+  color:white;
+  margin-right:15px;
+
+}
+
+
+
+/* Main Dashboard */
 
 main{
+
   padding:30px;
+
 }
 
 
+main h1{
+
+  margin-bottom:25px;
+
+}
+
+
+
+/* Cards */
+
 .card{
+
   background:#151820;
+
   border:1px solid #252936;
+
   border-radius:15px;
+
   padding:25px;
+
   margin-bottom:20px;
+
+}
+
+
+.card h2{
+
+  color:#22c55e;
+
+}
+
+
+.card h3{
+
+  font-size:32px;
+
+  margin-top:10px;
+
+}
+
+
+
+/* Dashboard Grid */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+
+}
+
+
+
+/* Button */
+
+button{
+
+  background:#22c55e;
+
+  border:none;
+
+  padding:10px 15px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+
+button:hover{
+
+  opacity:0.8;
+
+}
+
+
+
+/* LIGHT MODE */
+
+
+.light-mode{
+
+  background:#ffffff;
+
+  color:#111111;
+
+}
+
+
+
+.light-mode aside{
+
+  background:#f5f5f5;
+
+  border-right:1px solid #ddd;
+
+}
+
+
+.light-mode nav p{
+
+  color:#555;
+
+}
+
+
+.light-mode nav p:hover{
+
+  background:#ddd;
+
+  color:#111;
+
+}
+
+
+
+.light-mode .topbar{
+
+  background:#ffffff;
+
+  border-bottom:1px solid #ddd;
+
+}
+
+
+
+.light-mode .topbar input{
+
+  background:white;
+
+  color:#111;
+
+  border:1px solid #ccc;
+
+}
+
+
+
+.light-mode .card{
+
+  background:#ffffff;
+
+  color:#111;
+
+  border:1px solid #ddd;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:900px){
+
+.layout{
+
+flex-direction:column;
+
+}
+
+
+aside{
+
+width:100%;
+
 }
 
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
 }
 
 
-button{
-  cursor:pointer;
+
+@media(max-width:500px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
