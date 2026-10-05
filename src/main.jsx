@@ -1,7 +1,7 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import './style.css';
-
+import ThemeToggle from "./components/ThemeToggle";
 function App(){
  return <div className="app">
   <aside>
@@ -29,4 +29,13 @@ function App(){
   </main>
  </div>
 }
-createRoot(document.getElementById('root')).render(<App/>);
+  </div>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <>
+    <ThemeToggle />
+    <App />
+  </>
+);
