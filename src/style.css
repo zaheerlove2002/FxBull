@@ -1,86 +1,51 @@
-:root {
-  --bg: #08090d;
-  --text: #ffffff;
-  --card: #151820;
-  --sidebar: #111318;
-  --border: #252936;
-  --accent: #22c55e;
-}
-
-.light-mode {
-  --bg: #ffffff;
-  --text: #111827;
-  --card: #f3f4f6;
-  --sidebar: #ffffff;
-  --border: #e5e7eb;
-  --accent: #2563eb;
-}
-
-
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
 }
 
-
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,Arial,sans-serif;
-  transition:0.3s ease;
+  font-family:Arial, sans-serif;
+  background:#08090d;
+  color:white;
 }
 
-
-.app{
+.layout{
   display:flex;
   min-height:100vh;
 }
 
 
-/* Sidebar */
-
 aside{
-  width:240px;
-  background:var(--sidebar);
+  width:250px;
+  background:#11131a;
   padding:25px;
-  border-right:1px solid var(--border);
 }
 
 
-aside h2{
-  margin-bottom:25px;
+.content{
+  flex:1;
 }
 
 
-aside p{
-  color:#94a3b8;
-  cursor:pointer;
+.topbar{
+  height:70px;
+  background:#11131a;
+  padding:20px;
 }
 
-
-
-/* Main */
 
 main{
-  flex:1;
-  padding:40px;
+  padding:30px;
 }
 
-
-h1{
-  font-size:32px;
-}
-
-
-
-/* Cards */
 
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
+  background:#151820;
+  border:1px solid #252936;
+  border-radius:15px;
   padding:25px;
-  margin-top:20px;
+  margin-bottom:20px;
 }
 
 
@@ -91,47 +56,6 @@ h1{
 }
 
 
-.big h2{
-  color:var(--accent);
-  font-size:42px;
-}
-
-
-
-/* Theme Button */
-
-.theme-btn{
-
-  position:fixed;
-  top:20px;
-  right:25px;
-
-  background:var(--card);
-  color:var(--text);
-
-  border:1px solid var(--border);
-
-  padding:10px 15px;
-
-  border-radius:50px;
-
+button{
   cursor:pointer;
-
-  font-size:18px;
-
-  z-index:999;
-
-}
-
-
-@media(max-width:900px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-aside{
-display:none;
-}
-
 }
