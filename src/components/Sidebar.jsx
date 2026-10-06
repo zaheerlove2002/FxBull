@@ -1,31 +1,44 @@
-function Sidebar({ activePage, onNavigate }) {
+function Sidebar({activePage,onNavigate}){
 
-  const menuItem = (page, label) => (
-    <p
-      className={activePage === page ? "active-menu" : ""}
-      onClick={() => onNavigate(page)}
-    >
-      {label}
-    </p>
-  );
 
-  return (
-    <aside>
+return(
 
-      <h2>FxBull</h2>
+<aside>
 
-      <nav>
-        {menuItem("dashboard", "Dashboard")}
-        {menuItem("analytics", "Analytics")}
-        {menuItem("trades", "Trade History")}
-        {menuItem("journal", "Journal")}
-        {menuItem("strategies", "Strategies")}
-        {menuItem("broker", "Broker Hub")}
-        {menuItem("settings", "Settings")}
-      </nav>
+<h2>FxBull</h2>
 
-    </aside>
-  );
+
+<nav>
+
+
+<p onClick={()=>onNavigate("dashboard")}>
+Dashboard
+</p>
+
+
+<p onClick={()=>onNavigate("analytics")}>
+Analytics
+</p>
+
+
+<p onClick={()=>onNavigate("trades")}>
+Trade History
+</p>
+
+
+<p onClick={()=>onNavigate("journal")}>
+Journal
+</p>
+
+
+</nav>
+
+
+</aside>
+
+)
+
 }
+
 
 export default Sidebar;
