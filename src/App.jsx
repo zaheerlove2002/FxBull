@@ -27,7 +27,7 @@ function App() {
           <main>
             <h1>Strategies</h1>
             <div className="card">
-              Strategy management coming here.
+              Strategy management will appear here.
             </div>
           </main>
         );
@@ -37,7 +37,7 @@ function App() {
           <main>
             <h1>Broker Hub</h1>
             <div className="card">
-              Broker connection system coming here.
+              Broker connection system will appear here.
             </div>
           </main>
         );
@@ -47,7 +47,7 @@ function App() {
           <main>
             <h1>Settings</h1>
             <div className="card">
-              Profile and account settings coming here.
+              Account settings will appear here.
             </div>
           </main>
         );
@@ -59,20 +59,15 @@ function App() {
 
   return (
     <div className="layout">
-
       <Sidebar
         activePage={activePage}
         onNavigate={setActivePage}
       />
 
       <div className="content">
-
         <Topbar />
-
         {renderPage()}
-
       </div>
-
     </div>
   );
 }
